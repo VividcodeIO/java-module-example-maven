@@ -21,6 +21,7 @@
       <groupId>io.vividcode.advancedjava.module-example-maven</groupId>
       <artifactId>persistence-file</artifactId>
       <version>${project.version}</version>
+      <scope>runtime</scope>
     </dependency>
   </dependencies>
 
