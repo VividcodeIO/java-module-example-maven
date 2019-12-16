@@ -9,42 +9,18 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>launcher</artifactId>
+  <artifactId>api-v2</artifactId>
 
   <dependencies>
     <dependency>
       <groupId>io.vividcode.advancedjava.module-example-maven</groupId>
-      <artifactId>service</artifactId>
+      <artifactId>api-server</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>io.vividcode.advancedjava.module-example-maven</groupId>
-      <artifactId>persistence-file</artifactId>
+      <artifactId>common-v2</artifactId>
       <version>${project.version}</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>ch.qos.logback</groupId>
-      <artifactId>logback-core</artifactId>
-      <version>1.2.3</version>
-      <scope>runtime</scope>
     </dependency>
   </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <configuration>
-          <archive>
-            <manifest>
-              <mainClass>io.vividcode.advancedjava.module.launcher.Main</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-
 </project>
