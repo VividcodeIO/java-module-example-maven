@@ -1,15 +1,28 @@
 package io.vividcode.advancedjava.module.persistence.file;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.vividcode.advancedjava.module.model.Entity;
 import io.vividcode.advancedjava.module.persistence.PersistenceService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.UUID;
 
 public class FilePersistenceService implements PersistenceService {
-  private static final Logger logger = LoggerFactory.getLogger(FilePersistenceService.class);
+
+  private ObjectMapper objectMapper = new ObjectMapper();
+  private Path path;
+
+  public FilePersistenceService() throws IOException {
+    path = Files.createTempDirectory("file");
+    ;
+  }
 
   @Override
-  public void save(Entity entity) {
-    logger.info("Saved to file: " + entity);
+  public void save(Entity entity) throws Exception {
+    try (OutputStream outputStream = Files.newOutputStream(path.resolve(UUID.randomUUID().toString()))) {
+      objectMapper.writeValue(outputStream, entity);
+    }
   }
 }

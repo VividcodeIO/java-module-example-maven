@@ -20,6 +20,10 @@ public class EntityService {
   }
 
   public void create(Entity entity) {
-    persistenceService.save(entity);
+    try {
+      persistenceService.save(entity);
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
   }
 }
