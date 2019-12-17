@@ -10,10 +10,6 @@
     <moduleSet>
 
       <useAllReactorProjects>true</useAllReactorProjects>
-
-      <includes>
-        <include>io.vividcode.advancedjava.module-example-maven</include>
-      </includes>
       <binaries>
         <outputDirectory>modules</outputDirectory>
         <unpack>false</unpack>

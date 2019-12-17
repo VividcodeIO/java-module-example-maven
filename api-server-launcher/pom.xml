@@ -17,6 +17,18 @@
       <artifactId>api-server</artifactId>
       <version>${project.version}</version>
     </dependency>
+    <dependency>
+      <groupId>io.vividcode.advancedjava.module-example-maven</groupId>
+      <artifactId>api-v1</artifactId>
+      <version>${project.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.vividcode.advancedjava.module-example-maven</groupId>
+      <artifactId>api-v2</artifactId>
+      <version>${project.version}</version>
+      <scope>runtime</scope>
+    </dependency>
   </dependencies>
 
   <build>
